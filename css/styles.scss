@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    outline: 0;
+}
+
+.content {
+    width: 84%;
+    height: 100%;
+
+    margin: 0 auto;
+}
+
+// Header
+
+.header {
+    height: 80px;
+    background-color: #FFF;
+    box-shadow: 0 2px 10px -2px gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+._8pw {
+    width: 8%;
+}
+
+.header__inner {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo-reg {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.header__logo-inv {
+    font-size: 25px;
+    font-weight: 700;
+    color: #FFF;
+    background-color: #000;
+    padding: 0 2px;
+}
+
+.header_langbtn {
+    transition: color linear 0.1s;
+}
+
+.header_langbtn:hover {
+    color: rgba($color: #000000, $alpha: .75);
+    transition: color linear 0.1s;
+}
+
+.header_langbtn:active {
+    color: #000;
+}
+
+.menu {
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__btn {
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    transition: color linear .1s;
+}
+
+.menu__btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    
+    transition: transform 0.1s linear;
+    transform: scale(0.0, 1);
+    border-bottom: 3px solid #fc3838;
+}
+
+.menu__btn:hover {
+    color: rgba($color: #000000, $alpha: .75)
+}
+
+.menu__btn:hover:after {
+    opacity: 100%;
+    transform: scale(1, 1);
+}
+
+.menu__btn:active:after {
+    transform: scale(1.1, 1);
+}
+
+.call-number {
+    height: 100%;
+    padding: 0 50px 0 35px;
+    background-color: #303030;
+    text-align: right;
+    border-right: 3px solid #fc3838;
+    border-bottom: 3px solid #fc3838;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.call-number__phone {
+    font-size: 20px;
+    //font-family: 'Cera Pro', sans-serif;
+    color: #FFF;
+}
+
+.call-number__phone-red {
+    color: #fc3838;
+}
+
+.call-number__call {
+    font-size: 15px;
+    text-decoration: underline;
+    color: #FFF;
+
+    transition: all linear .15s;
+
+    &:hover {
+        color: rgba($color: #FFF, $alpha: 0.8);
+    }
+
+    &:active {
+        color:rgba($color: #fc3838, $alpha: 0.8);
+        text-decoration: none;
+    }
+}
+
+.header__lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Intro
+
+.intro {
+    width: 100%;
+    height: calc(100vh - 80px);
+
+    background-color: white;
+    background-image: url("../img/photo-editing-on-tablet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.intro__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    //justify-content: baseline;
+    align-items: center;
+}
+
+.intro__supcaption {
+    font-weight: 500;
+    font-size: 30px;
+    position: relative;
+    margin-top: 14%;
+    margin-bottom: 20px;
+}
+
+.intro__supcaption:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -20px;
+    border-bottom: 3px solid black;
+    transform: scale(0.95, 1);
+}
+
+.intro__caption {
+    padding: 50px 0;
+    font-size: 48pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.btn {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 23px 50px 20px 50px;
+    
+    color: white;
+    text-transform: uppercase;
+    font-size: 14pt;
+    background: #222222;
+    border-radius: 16px 0 16px 0;
+    
+    box-shadow:
+        3px 3px #fc3838,
+        6px 6px 5px rgba($color: gray, $alpha: .5);
+
+    transition: all linear .15s;
+}
+
+.btn:hover {
+    top: 2px;
+
+    color: rgba($color: #FFF, $alpha: .9);
+    
+    box-shadow:
+        3px 3px #fc3838,
+        6px 4px 5px rgba($color: gray, $alpha: .75);
+}
+
+.btn:active {
+    top: 6px;
+    left: 4px;
+
+    box-shadow:
+        3px 3px #fc3838,
+        3px 3px 5px rgba($color: gray, $alpha: .75);
+}
+
+.intro__scroll-btn {
+    position: relative;
+    top: 0;
+    margin-top: 9%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    background: #222222;
+    box-shadow: 1px 1px 5px rgba($color: gray, $alpha: .75);
+
+    transition: all linear .15s;
+
+    &:hover {
+        transform: scale(1.1, 1.1);
+    }
+
+    &:active {
+        top: 5px;
+        transform: scale(1.1, 1.1);
+    }
+
+    &:before {
+		content: '';
+        display: block;
+        top: 50%;
+        margin-left: 5%;
+		width: 25%;
+		height: 2px;
+		background-color: #ffffff;
+		position: absolute;
+		transform: rotate(45deg);
+        left: 25%;
+    }
+
+	&:after {
+		content: '';
+        display: block;
+        top: 50%;
+        margin-right: 5%;
+		width: 25%;
+		height: 2px;
+		background-color: #ffffff;
+		position: absolute;
+		transform: rotate(-45deg);
+        right: 25%;
+    }
+
+}
